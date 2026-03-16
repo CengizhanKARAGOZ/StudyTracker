@@ -1,6 +1,8 @@
+using StudyTracker.Domain.Common;
+
 namespace StudyTracker.Domain.Entities;
 
-public class DailyLog
+public class DailyLog : BaseEntity
 {
     public DateOnly Date { get; set; }
     public int TotalMinutes { get; set; }
