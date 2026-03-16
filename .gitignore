@@ -11,4 +11,7 @@ out/
 .DS_Store
 Thumbs.db
 *.log
+appsettings.json
+appsettings.Development.json
+docker-compose.yml
 docker-compose.override.yml
