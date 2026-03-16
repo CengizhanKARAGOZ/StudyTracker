@@ -1,0 +1,6 @@
+@StudyTracker.API_HostAddress = http://localhost:5212
+
+GET {{StudyTracker.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
