@@ -1,4 +1,5 @@
 using AutoMapper;
+using StudyTracker.Application.DTOs.Note;
 using StudyTracker.Application.DTOs.StudySession;
 using StudyTracker.Application.DTOs.Subject;
 using StudyTracker.Application.DTOs.Topic;
@@ -32,5 +33,11 @@ public class MappingProfile : Profile
             .ForMember(d => d.TopicName, opt => opt.MapFrom(s => s.Topic.Name))
             .ForMember(d => d.SubjectName, opt => opt.MapFrom(s => s.Topic.Subject.Name))
             .ForMember(d => d.SubjectColor, opt => opt.MapFrom(s => s.Topic.Subject.Color));
+        
+        // Note
+        CreateMap<Note, NoteDto>()
+            .ForMember(d => d.TopicName, opt => opt.MapFrom(n => n.Topic.Name));
+
+        CreateMap<CreateNoteDto, Note>();
     }
 }
